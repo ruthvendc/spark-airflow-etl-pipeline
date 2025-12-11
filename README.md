@@ -3,7 +3,7 @@
 ## Projects
 ### Project 1
 - Description
-- Links
+- [Python Scripts](https://github.com/ruthvendc/python)
 
 ### Project 2
 - Description
