@@ -3,5 +3,5 @@ logo: docs/assets/headshot_circle.png
 description: Database Advisor
 #show_downloads: true
 #theme: jekyll-theme-minimal
-theme: jekyll-theme-midnight
+theme: jekyll-theme-minima
 #remote_theme: mmistakes/minimal-mistakes
