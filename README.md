@@ -6,7 +6,6 @@ This repository contains a **production-style batch data engineering pipeline** 
 The project ingests raw CSV data, validates and transforms it using **PySpark**, writes optimized **Parquet** datasets, and orchestrates the entire workflow using **Apache Airflow**.
 
 All data used was synthetically generated using python Fake — no proprietary or employer-related data.
-All tools used were installed locally on personal computing environment.
 
 ---
 
