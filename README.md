@@ -1,119 +1,175 @@
-# Data Engineering Portfolio
+# End-to-End Data Engineering Pipeline (Spark + Airflow)
 
-Hi 👋, I'm **David Ruthven** — a senior IT professional pivoting into **Data Engineering**.
+## Overview
+This repository contains a **production-style batch data engineering pipeline** built to demonstrate the core skills expected of a **Data Engineer I / II**.
 
-I bring **14+ years of experience** in Oracle database administration, data modeling, performance tuning, and systems architecture, and I’m now focused on building modern data pipelines using **Python, Spark, Airflow, and cloud-native tools**.
+The project ingests raw CSV data, validates and transforms it using **PySpark**, writes optimized **Parquet** datasets, and orchestrates the entire workflow using **Apache Airflow**.
 
-This repository (and the linked projects below) serve as a **hands-on portfolio** demonstrating real-world data engineering skills: ingestion, transformation, orchestration, data quality, and analytics-ready outputs.
+All data used is **synthetic or public** — no proprietary or employer-related data.
 
 ---
 
-## 🔧 Core Skills
+## 🎯 Why This Project
 
-- **Languages:** Python, SQL
-- **Data Processing:** Apache Spark (PySpark), Spark SQL
+This project was intentionally designed to mirror real-world data engineering work:
+
+- Build **repeatable, idempotent pipelines**
+- Separate raw, transformed, and analytics-ready data
+- Use Spark for scalable processing
+- Use Airflow for orchestration and dependency management
+- Write clean, readable, interview-friendly code
+
+This single project is meant to serve as a **flagship portfolio example**.
+
+---
+
+## 🧰 Tech Stack
+
+- **Language:** Python
+- **Processing:** Apache Spark (PySpark, Spark SQL)
 - **Orchestration:** Apache Airflow
-- **Storage & Formats:** Parquet, CSV, relational databases
-- **Data Modeling:** Star schemas, normalized & analytical models
-- **Cloud & Platforms:** Azure (Fundamentals), Oracle
-- **Dev Practices:** Git, modular code, reproducible pipelines
+- **Storage:** Local filesystem (cloud-ready design)
+- **Formats:** CSV → Parquet
+- **Version Control:** Git
 
 ---
 
-## 📂 Featured Projects
+## 🗂️ Data Architecture (Medallion Pattern)
 
-### 1️⃣ End-to-End Data Engineering Pipeline (Synthetic Data)
-**Tech:** Python, PySpark, Airflow, Parquet
-
-**Overview:**
-An end-to-end batch data pipeline that ingests raw CSV data, applies transformations using Spark, and produces analytics-ready datasets.
-
-**What it Demonstrates:**
-- Synthetic data generation for repeatable testing
-- Spark-based transformations and aggregations
-- Partitioned Parquet outputs
-- Airflow DAG design and scheduling
-- Separation of raw, staged, and curated data layers
-
-📁 Repo: `data-engineering-pipeline`
-
----
-
-### 2️⃣ Data Modeling & Analytics Project
-**Tech:** SQL, Spark SQL
-
-**Overview:**
-Design and implementation of analytical datasets optimized for reporting and BI use cases.
-
-**What it Demonstrates:**
-- Fact and dimension table design
-- Data quality checks
-- Performance-aware transformations
-
-📁 Repo: `analytics-data-model`
-
----
-
-### 3️⃣ Python Data Utilities
-**Tech:** Python
-
-**Overview:**
-A collection of reusable Python utilities for data ingestion, validation, and transformation.
-
-**What it Demonstrates:**
-- Clean, modular Python code
-- Reusable data engineering helpers
-- Logging and error handling
-
-📁 Repo: `python-data-utils`
-
----
-
-## 🧱 Architecture Patterns Used
-
-- **Medallion Architecture** (Bronze / Silver / Gold)
-- Batch-oriented ETL pipelines
-- Idempotent data processing
-- Schema evolution awareness
-
----
-
-## 📊 Sample Workflow
-
-1. Generate or ingest raw data (CSV)
-2. Validate schema and data quality
-3. Transform using Spark (PySpark / Spark SQL)
-4. Write optimized Parquet outputs
-5. Orchestrate pipeline execution with Airflow
-
----
-
-## 🚀 How to Run Projects Locally
-
-```bash
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run Spark job
-spark-submit jobs/transform_data.py
+```
+Raw (Bronze)
+   ↓
+Staged / Cleaned (Silver)
+   ↓
+Analytics-Ready (Gold)
 ```
 
-> Each project repository contains its own detailed setup instructions.
+- **Bronze:** Raw CSV ingestion, schema enforcement
+- **Silver:** Cleansed, typed, validated datasets
+- **Gold:** Aggregated datasets optimized for analytics
 
 ---
 
-## 🎯 Purpose of This Portfolio
+## 🏗️ Pipeline Architecture (Mermaid)
 
-This portfolio is designed to:
-- Demonstrate **practical data engineering skills**
-- Show a transition from traditional DBA work to **modern data platforms**
-- Highlight clean design, scalability, and production-minded thinking
+```mermaid
+graph TD
+    A[Source CSV Files] --> B[Bronze Ingestion - Spark]
+    B --> C[Silver Transformations - Spark]
+    C --> D[Gold Aggregations - Spark SQL]
+    D --> E[Parquet Output]
 
-All datasets used are **synthetic or public** — no proprietary or employer-related data is included.
+    F[Airflow DAG] --> B
+    F --> C
+    F --> D
+```
+
+---
+
+## 🔄 Workflow Steps
+
+1. **Ingest Raw Data**  
+   - Read CSV files
+   - Enforce schema
+   - Write raw Parquet
+
+2. **Transform & Clean**  
+   - Cast data types
+   - Handle nulls and invalid records
+   - Apply business logic
+
+3. **Aggregate**  
+   - Grouping and summarization
+   - Create analytics-ready datasets
+
+4. **Orchestrate**  
+   - Airflow DAG defines task order
+   - Each Spark job is independently runnable
+
+---
+
+## ⏱️ Airflow DAG Design
+
+```text
+start
+  ↓
+ingest_bronze
+  ↓
+transform_silver
+  ↓
+aggregate_gold
+  ↓
+end
+```
+
+**Key Design Points:**
+- Tasks are **idempotent**
+- Failures are isolated per stage
+- Clear task boundaries for observability
+
+---
+
+## 📁 Repository Structure
+
+```
+.
+├── dags/
+│   └── data_pipeline_dag.py
+├── jobs/
+│   ├── ingest_bronze.py
+│   ├── transform_silver.py
+│   └── aggregate_gold.py
+├── data/
+│   ├── raw/
+│   ├── bronze/
+│   ├── silver/
+│   └── gold/
+├── utils/
+│   └── spark_session.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## ▶️ How to Run Locally
+
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+# Start Airflow (simplified)
+airflow standalone
+
+# Trigger DAG
+airflow dags trigger data_pipeline_dag
+```
+
+> Spark jobs can also be run independently using `spark-submit`.
+
+---
+
+## 🧠 What This Demonstrates (Data Engineer I / II)
+
+- Writing Spark jobs for ETL workloads
+- Designing batch pipelines end to end
+- Using Airflow for orchestration
+- Data modeling and aggregation logic
+- Clean repo structure and documentation
+- Production-aware thinking (even when running locally)
+
+---
+
+## 🚀 Recommended Portfolio Scope
+
+For a strong Data Engineer I / II portfolio, **2–3 projects are enough**:
+
+1. **This flagship Spark + Airflow pipeline** (core requirement)
+2. One **SQL / analytics-focused project** (data modeling, reporting)
+3. *(Optional)* One **Python utilities or data quality project**
+
+Hiring managers prefer **depth over volume** — one well-documented pipeline like this is far more valuable than many shallow projects.
 
 ---
 
@@ -124,4 +180,4 @@ All datasets used are **synthetic or public** — no proprietary or employer-rel
 
 ---
 
-⭐ If you’re reviewing this as part of an interview process, feel free to explore individual repositories for deeper technical detail, diagrams, and design notes.
+⭐ This project is intentionally scoped, readable, and practical — designed to reflect how data engineering work is done in real teams.
