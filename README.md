@@ -135,14 +135,21 @@ end
 ## ▶️ How to Run Locally
 
 ```bash
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+mkdir $HOME/airflow
+cd $HOME/airflow
+virtualenv --python=/usr/bin/python3.11 .venv
+source .venv/bin/activate
+export AIRFLOW_HOME=$HOME/airflow # You want to put this is your .bash_profile
+pip3 install apache-airflow==3.1.2 --constraint https://raw.githubusercontent.com/apache/airflow/constraints-3.1.2/constraints-3.13.txt
+pip3 install pyspark
 
 # Start Airflow (simplified)
 airflow standalone
 
-# Trigger DAG
+# Airflow UI - Open Web Broswer
+http://localhost:8080/home
+
+# Command Line Trigger DAG
 airflow dags trigger data_pipeline_dag
 ```
 
