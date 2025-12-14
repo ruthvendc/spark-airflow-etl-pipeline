@@ -50,22 +50,6 @@ Analytics-Ready (Gold)
 
 ---
 
-## 🏗️ Pipeline Architecture (Mermaid)
-
-```mermaid
-graph TD
-    A[Source CSV Files] --> B[Bronze Ingestion - Spark]
-    B --> C[Silver Transformations - Spark]
-    C --> D[Gold Aggregations - Spark SQL]
-    D --> E[Parquet Output]
-
-    F[Airflow DAG] --> B
-    F --> C
-    F --> D
-```
-
----
-
 ## 🔄 Workflow Steps
 
 1. **Ingest Raw Data**  
