@@ -135,13 +135,20 @@ end
 ## ▶️ How to Run Locally
 
 ```bash
+# I installed the following locally on my ThinkPad P14 Gen 6 AMD running Fedora 43
 mkdir $HOME/airflow
 cd $HOME/airflow
+
+# I had issues running python 3.14 with Airflow 3.x so had to use 3.11.
 virtualenv --python=/usr/bin/python3.11 .venv
 source .venv/bin/activate
-export AIRFLOW_HOME=$HOME/airflow # You want to put this is your .bash_profile
+
+# Reference the python 3.13 constraints even though 3.11 will be used.
 pip3 install apache-airflow==3.1.2 --constraint https://raw.githubusercontent.com/apache/airflow/constraints-3.1.2/constraints-3.13.txt
 pip3 install pyspark
+
+# You want to put this is your .bash_profile
+export AIRFLOW_HOME=$HOME/airflow
 
 # Start Airflow (simplified)
 airflow standalone
