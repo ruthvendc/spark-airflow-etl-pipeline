@@ -136,6 +136,8 @@ end
 
 ```bash
 # I performed the following on my ThinkPad P14 Gen 6 AMD running Fedora 43
+
+#### Install Airflow ####
 mkdir $HOME/airflow
 cd $HOME/airflow
 
@@ -145,12 +147,30 @@ source .venv/bin/activate
 
 # Reference the python 3.13 constraints even though 3.11 will be used.
 pip3 install apache-airflow==3.1.2 --constraint https://raw.githubusercontent.com/apache/airflow/constraints-3.1.2/constraints-3.13.txt
+
+# You can install pyspark for now but you will also need the actual spark system libraries (see install steps below)
 pip3 install pyspark
+
+#### Install Spark binaries ####
+mkdir $HOME/spark
+cd $HOME/spark
+wget https://archive.apache.org/dist/spark/spark-4.0.1/spark-4.0.1-bin-hadoop3.tgz && tar xf spark-4.0.1-bin-hadoop3.tgz && rm -rf spark-4.0.1-bin-hadoop3.tgz
+ln -s spark-4.0.1-bin-hadoop3 current
+
+#### Install JDK 21 ####
+sudo dnf install java-21-openjdk-devel
 
 # You want to put this is your .bash_profile
 export AIRFLOW_HOME=$HOME/airflow
+export AIRFLOW_HOME=$HOME/spark/current
+export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk 
+
+# Exit your shell and create a new one to pick up new environment variables or you can do ". $HOME/.bash_profile"
 
 # Start Airflow (simplified)
+cd $HOME/airflow
+source .venv/bin/activate
 airflow standalone
 
 # Airflow UI - Open Web Broswer
