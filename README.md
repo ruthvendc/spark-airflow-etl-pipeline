@@ -161,10 +161,13 @@ airflow standalone
 http://localhost:8080/home
 
 # Command Line Trigger DAG
-airflow dags trigger data_pipeline_dag
+airflow dags trigger <dag_name>
+
+# Spark jobs can also be run independently using `spark-submit`.
+
 ```
 
-> Spark jobs can also be run independently using `spark-submit`.
+
 
 ---
 
