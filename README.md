@@ -177,7 +177,7 @@ cd $HOME/airflow
 source .venv/bin/activate
 airflow standalone
 
-# Airflow UI - Open Web Broswer
+# Airflow UI - Open Web Broswer (User/Pass is located at "$HOME/airflow/simple_auth_manager_passwords.json.generated")
 http://localhost:8080/home
 
 # Example command line to trigger DAG
