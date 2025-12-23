@@ -1,0 +1,106 @@
+facility_id,facility_name,facility_type,address,city,state,zip_code,square_feet,year_built,status,last_updated
+FAC-0001,Welchview Public Facility,Library,024 Miles Shore,Huntberg,SD,24163,11556,1985,,2025-11-30
+FAC-0002,Bakerberg Public Facility,Community Center,638 Nguyen Dam,East Nicoleburgh,AL,88464,41579,1963,Active,2025-11-20
+FAC-0002,Bakerberg Public Facility,Community Center,638 Nguyen Dam,East Nicoleburgh,AL,88464,41579,1963,Active,2025-11-20
+FAC-0002,Bakerberg Public Facility,Community Center,638 Nguyen Dam,East Nicoleburgh,AL,88464,41579,1963,Active,2025-11-20
+FAC-0003,West Erikaborough Public Facility,Utility Facility,652 Williams Isle Apt. 761,Josephtown,CO,15491,13331,1953,Active,2025-12-01
+FAC-0004,Harperport Public Facility,Community Center,026 Gill Coves Apt. 569,Amandaburgh,NY,42330,65990,2014,Active,2025-11-14
+FAC-0004,Harperport Public Facility,Community Center,026 Gill Coves Apt. 569,Amandaburgh,NY,42330,65990,2014,Active,2025-11-14
+FAC-0004,Harperport Public Facility,Community Center,026 Gill Coves Apt. 569,Amandaburgh,NY,42330,65990,2014,Active,2025-11-14
+FAC-0005,Lewishaven Public Facility,Community Center,4189 Austin Locks,New Lauriechester,VA,95719,192700,2019,,2025-11-30
+FAC-0006,Port Deborahtown Public Facility,Community Center,4414 Nancy Crescent,New Tiffanybury,NM,45278,122757,1985,Active,2025-11-24
+FAC-0007,Port Meganland Public Facility,Community Center,1052 Dawson Alley,New Robertstad,VI,43816,188013,2004,Inactive,2025-11-23
+FAC-0007,Port Meganland Public Facility,Community Center,1052 Dawson Alley,New Robertstad,VI,43816,188013,2004,Inactive,2025-11-23
+FAC-0008,Lutzland Public Facility,Admin Building,4128 Ronnie Forge Suite 585,Lisaland,VA,33362,45758,1977,Inactive,2025-12-08
+FAC-0009,Thomasfurt Public Facility,Library,1858 Williams Heights,Port Erin,VI,54958,29312,1998,Active,2025-11-19
+FAC-0010,South Edwin Public Facility,Admin Building,2481 Golden Run Suite 238,Soniaside,AR,75768,227165,1994,Inactive,2025-11-26
+FAC-0011,North Jaytown Public Facility,Library,808 Joseph Crossroad Apt. 463,Perezland,MD,11649,196294,2008,Active,2025-12-08
+FAC-0012,East Kelseymouth Public Facility,Utility Facility,819 Robertson Crescent Suite 221,Michaelmouth,IA,64032,25656,2020,Inactive,2025-11-23
+FAC-0013,Brettport Public Facility,Admin Building,028 Bates Ranch Suite 962,Barnesbury,KY,63364,156349,1974,Active,2025-12-01
+FAC-0014,West Paul Public Facility,Library,16783 Melissa Ramp Suite 616,Andersenborough,VT,11304,178346,1979,Inactive,2025-11-28
+FAC-0015,South Tyler Public Facility,Library,828 Barnes Fall,Lake Joshuaview,AL,02051,229216,1979,Active,2025-12-12
+FAC-0016,South Phyllishaven Public Facility,Utility Facility,378 Carla Courts,East Luismouth,ND,53039,77869,2008,Inactive,2025-11-25
+FAC-0017,Colleenbury Public Facility,Community Center,5272 Eric Fords,South Josephbury,WA,70409,102040,1995,Active,2025-12-12
+FAC-0018,South Priscilla Public Facility,Admin Building,483 Sean Park Suite 800,Shawnland,MO,01311,188977,1959,Active,2025-11-15
+FAC-0019,Port Shawnton Public Facility,Community Center,571 Lewis Spurs,South Williamberg,OK,85455,47834,2009,Inactive,2025-11-15
+FAC-0020,West Nicholaschester Public Facility,Admin Building,15149 Shannon Lock Apt. 503,Lake Samanthabury,AS,24986,247585,2021,Active,2025-11-23
+FAC-0021,West Peter Public Facility,Admin Building,480 Karen Brook,North Ian,IN,75857,225948,1957,Active,2025-12-08
+FAC-0022,New Eileenmouth Public Facility,Library,949 Donna Square,South John,HI,95356,216037,1990,Inactive,2025-12-07
+FAC-0023,Port Gregory Public Facility,Admin Building,876 Gabriel Island Suite 370,Port Jessica,MT,49368,22350,1977,Inactive,2025-12-12
+FAC-0024,East Stephanie Public Facility,Community Center,2313 Webb Neck,Lake Mathew,RI,17987,176819,2013,Inactive,2025-12-07
+FAC-0025,West Rogerville Public Facility,Utility Facility,8079 Lyons Ways Apt. 399,West Amyburgh,ME,87725,42452,1983,Active,2025-11-18
+FAC-0026,Brittanyton Public Facility,Community Center,014 Mathew Spurs,Collierborough,AR,40300,200294,2021,Inactive,2025-11-29
+FAC-0027,Webbstad Public Facility,Utility Facility,80278 Stephen Falls Suite 689,Port Heathertown,ID,64744,240358,2001,Inactive,2025-12-09
+FAC-0028,East Lisa Public Facility,Community Center,333 Charles Forest,East Joshua,AK,33885,41262,2015,Inactive,2025-12-03
+FAC-0029,South Joseph Public Facility,Library,13400 Robert Passage Suite 860,Port Andrewburgh,MS,45962,203123,1956,Active,2025-12-06
+FAC-0030,Lake Jeremy Public Facility,Community Center,61148 Morgan Heights Apt. 480,Robinsonberg,OR,19459,169481,1970,Inactive,2025-11-18
+FAC-0031,Wiseport Public Facility,Library,9660 Steven Place Apt. 438,Powerston,RI,40857,105864,1998,Inactive,2025-11-14
+FAC-0032,Smithtown Public Facility,Admin Building,8833 Michael Parkways Apt. 961,Jessicastad,CA,85552,150024,1951,Active,2025-11-19
+FAC-0033,Nicholasfort Public Facility,Admin Building,1657 Michael Oval,Lake Leeside,MD,83207,206483,1993,Active,2025-12-08
+FAC-0034,West Austinmouth Public Facility,Admin Building,30438 Kristen Park Suite 195,North James,NJ,52507,118971,1970,Inactive,2025-11-26
+FAC-0035,West Sandra Public Facility,Library,44500 Briggs Village,Johnsonborough,VI,59412,194292,1983,Active,2025-12-07
+FAC-0036,Lake Rickburgh Public Facility,Library,589 Reese Manor,Wolfemouth,CT,43278,233201,1988,Active,2025-11-27
+FAC-0037,West Casey Public Facility,Community Center,327 Cheryl Fort Apt. 805,West Phillip,MH,20596,103019,1970,Active,2025-12-05
+FAC-0038,West Jaime Public Facility,Admin Building,17329 Smith Keys Suite 833,Davidchester,WY,83937,133085,1952,Active,2025-11-18
+FAC-0039,Carterfort Public Facility,Admin Building,716 Mcgee Unions Suite 820,Harrisonfort,NJ,48373,235351,1989,Active,2025-12-09
+FAC-0040,Juarezhaven Public Facility,Library,95169 Heather Bypass Apt. 805,Johnville,AL,18393,68143,2022,Active,2025-12-03
+FAC-0041,Craigtown Public Facility,Library,151 Daniel Causeway Suite 553,Lake Dianaport,NC,22480,196865,2012,Active,2025-12-12
+FAC-0042,Samuelshire Public Facility,Community Center,99161 Anderson Road,Spenceberg,KY,90070,38657,2010,Active,2025-12-05
+FAC-0043,Armstrongfort Public Facility,Admin Building,869 Michael Curve,Lake Alan,MS,24505,143326,2004,Active,2025-11-30
+FAC-0044,South Nicolechester Public Facility,Community Center,75546 Joseph Plains,Bradport,KY,92418,191895,1989,Inactive,2025-12-08
+FAC-0045,Jenniferfurt Public Facility,Admin Building,91824 Jason Mount,South Jessicamouth,CT,42682,119845,2016,Inactive,2025-12-11
+FAC-0046,Sarachester Public Facility,Library,567 Hunt Ways Suite 330,Blackview,NC,98869,69986,1978,Active,2025-11-21
+FAC-0047,North John Public Facility,Admin Building,545 Stacy Land,Lopezberg,AR,97355,10514,2020,Active,2025-12-03
+FAC-0048,South Gary Public Facility,Community Center,852 Gilmore Passage Apt. 576,Jamesshire,TX,31881,6885,1959,Active,2025-11-18
+FAC-0049,South Mark Public Facility,Community Center,432 Jones Lights Apt. 905,East Cassandramouth,PW,36525,22668,1954,Inactive,2025-11-15
+FAC-0050,Lake Anthony Public Facility,Library,416 Cassandra Meadows Apt. 287,East Michael,MO,47051,139782,1980,Inactive,2025-12-07
+FAC-0051,Claymouth Public Facility,Utility Facility,610 Bell Street Suite 158,West Jasmineview,IL,14223,61160,2019,Active,2025-12-08
+FAC-0052,Linshire Public Facility,Utility Facility,415 Vanessa Motorway Suite 755,Webbborough,NJ,02911,68700,2010,Inactive,2025-11-22
+FAC-0053,East Brentburgh Public Facility,Community Center,77745 Carroll Avenue Suite 153,South Diane,LA,13474,29726,1962,Inactive,2025-12-07
+FAC-0054,Jamesside Public Facility,Admin Building,1435 Natalie Fork,South Rhondaland,CA,19838,116038,2002,Inactive,2025-12-03
+FAC-0055,Huffland Public Facility,Library,321 Nicholas Key,Jacobburgh,IN,43219,181518,1962,Active,2025-12-02
+FAC-0056,North Traceyshire Public Facility,Utility Facility,79989 Walsh Expressway Apt. 127,North Tylerburgh,CT,06335,195896,1993,Active,2025-12-02
+FAC-0057,Rebeccaburgh Public Facility,Community Center,3427 Robin Crescent,South Savannah,OR,21912,55224,1974,Inactive,2025-11-29
+FAC-0058,Bellberg Public Facility,Community Center,34558 Lucas Well,Smithside,MO,79061,115593,1973,Inactive,2025-12-05
+FAC-0059,North Rebeccatown Public Facility,Utility Facility,0116 John Key Suite 471,Barkerville,TX,97032,70485,1959,Inactive,2025-12-06
+FAC-0060,North Ritafurt Public Facility,Library,652 Derek Forges,New Heidi,UT,57659,18261,2019,Active,2025-11-28
+FAC-0061,Seanstad Public Facility,Library,92170 Espinoza Valley Suite 854,East Jasmineton,ME,43631,247841,1980,Active,2025-11-29
+FAC-0062,North Alexandria Public Facility,Utility Facility,02268 Russell Centers,North Davidtown,AK,57584,132307,2011,Active,2025-11-22
+FAC-0063,Jamesport Public Facility,Utility Facility,24260 Matthew Path,Port James,NE,83302,241569,1957,Active,2025-12-02
+FAC-0064,Williamsburgh Public Facility,Utility Facility,9839 Miller Meadows,Benjaminview,PA,58404,5565,1999,Inactive,2025-11-20
+FAC-0065,Mcmillanborough Public Facility,Utility Facility,39295 Clifford Pine Suite 761,West Thomasfurt,VI,99486,79776,2004,Inactive,2025-11-20
+FAC-0066,Catherinestad Public Facility,Community Center,9546 Duran Spur Suite 664,West Peterstad,KS,77225,54780,1987,Active,2025-11-30
+FAC-0067,Meganmouth Public Facility,Library,773 Austin Extensions,Port Kayla,FM,36902,156828,2019,Active,2025-11-14
+FAC-0068,Johnside Public Facility,Admin Building,09145 Erickson Forest Apt. 331,Santosshire,NC,27162,19985,1956,Inactive,2025-11-17
+FAC-0069,South Robin Public Facility,Community Center,185 Lindsey Fork Apt. 994,North Briana,AK,46309,19910,2015,Active,2025-12-01
+FAC-0070,Ellismouth Public Facility,Community Center,3071 Christopher Ports,Lake Beth,HI,68806,22962,1958,Active,2025-12-10
+FAC-0071,South Jessica Public Facility,Utility Facility,906 Ashley Prairie Apt. 274,Thomasview,UT,92755,36427,2022,Active,2025-12-08
+FAC-0072,West Shawnborough Public Facility,Library,6845 Christensen Shoals,West Kristinaville,MT,85808,167367,1960,Inactive,2025-11-22
+FAC-0073,East Ambermouth Public Facility,Admin Building,8598 Nathaniel Flats Suite 285,Lake Jennifer,GU,84625,73358,1976,Inactive,2025-11-30
+FAC-0074,North Maria Public Facility,Community Center,7706 Lutz Junction Apt. 353,South James,MP,74742,74629,2000,Active,2025-12-06
+FAC-0075,Herreraton Public Facility,Admin Building,907 Brett Terrace,Lake Denise,MT,90311,124858,1990,Active,2025-12-03
+FAC-0076,Kimberlyshire Public Facility,Library,1030 Reed Row Apt. 893,Port Alexandriastad,OK,84080,125136,2022,Active,2025-11-25
+FAC-0077,Millerland Public Facility,Library,756 Weeks Freeway,Jonesville,NH,32168,145937,1977,Inactive,2025-12-09
+FAC-0078,South Samuelberg Public Facility,Community Center,847 Jacob Lane,Crawfordfurt,AK,27768,249648,1994,Active,2025-12-04
+FAC-0079,South Ian Public Facility,Community Center,7606 Mark Circle Apt. 248,North Robert,AK,42459,101869,1986,Active,2025-11-16
+FAC-0080,Lake Craigville Public Facility,Utility Facility,7919 Rodney Villages Apt. 888,South Robert,GU,27345,223561,2019,Inactive,2025-12-04
+FAC-0081,Johnside Public Facility,Library,59745 Peterson Underpass,East Ashleyburgh,SD,02327,180076,2020,Inactive,2025-11-27
+FAC-0082,North Rickyview Public Facility,Library,01721 Sloan Square Apt. 451,Melissamouth,WV,94663,235195,1967,Inactive,2025-11-27
+FAC-0083,Loribury Public Facility,Library,320 Powell Expressway Suite 873,North Kylefurt,KS,77668,238232,1963,Active,2025-11-23
+FAC-0084,West Brooke Public Facility,Admin Building,7349 Payne Glen,Marcusstad,MO,41639,78860,1976,Inactive,2025-11-26
+FAC-0085,Lake Tinaburgh Public Facility,Community Center,0209 Daniel Drives Apt. 100,Allenhaven,WV,77055,185223,1983,Inactive,2025-12-01
+FAC-0086,Lake Derek Public Facility,Admin Building,7120 Kim Trace Suite 352,Nunezchester,CO,14754,242328,1956,Active,2025-12-06
+FAC-0087,North Melanie Public Facility,Utility Facility,2074 Daniel Locks Suite 162,Port Jamesborough,SC,25429,222408,1985,Active,2025-12-01
+FAC-0088,Johnsonhaven Public Facility,Library,05520 Christopher Well Suite 151,Ashleyland,PA,44284,92439,1966,Inactive,2025-11-20
+FAC-0089,Hurstfort Public Facility,Community Center,871 Gonzalez Curve Apt. 457,Hillland,MD,56356,199309,2006,Inactive,2025-11-29
+FAC-0090,Michelleside Public Facility,Library,75658 Gay Ferry,Soniaview,OH,40732,34327,1959,Active,2025-11-14
+FAC-0091,Hansonbury Public Facility,Library,77785 Stacey Tunnel,Jonesfurt,RI,91543,223784,1997,Active,2025-12-04
+FAC-0092,East Catherineville Public Facility,Utility Facility,956 Lawrence Via Suite 724,Port Breanna,NV,68472,38409,1955,Inactive,2025-11-27
+FAC-0093,New Michelle Public Facility,Admin Building,457 Reginald Stream,Jenniferbury,MN,31151,240662,1955,Inactive,2025-12-06
+FAC-0094,East Thomas Public Facility,Community Center,9446 Soto Rest Apt. 860,Cherylside,CA,34709,183799,1981,Active,2025-11-21
+FAC-0095,East Ashleyside Public Facility,Admin Building,73024 Bradley Well,Chandlerhaven,PW,65324,209502,2021,Inactive,2025-12-11
+FAC-0096,Mitchellmouth Public Facility,Community Center,99328 King Landing Suite 785,West Monica,HI,67451,247683,1980,Active,2025-12-02
+FAC-0097,West Aliciafort Public Facility,Community Center,2215 Linda Villages,East Margaretbury,IA,47704,236057,2002,Active,2025-11-30
+FAC-0098,Valentineville Public Facility,Community Center,360 Jason Ford Apt. 340,Seanview,PW,82109,198085,1992,Inactive,2025-11-20
+FAC-0099,East Eric Public Facility,Community Center,406 Heather Ford Suite 719,Monicaville,AL,53119,74941,1970,Active,2025-12-09
+FAC-0100,Derrickburgh Public Facility,Utility Facility,21774 Hodges Cape Apt. 843,Lake Brian,GA,94871,233633,1954,Inactive,2025-12-05
