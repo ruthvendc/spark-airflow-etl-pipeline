@@ -220,5 +220,3 @@ Hiring managers prefer **depth over volume** — one well-documented pipeline li
 - **LinkedIn:** https://www.linkedin.com/in/david-ruthven-a0b50521/
 
 ---
-
-⭐ This project is intentionally scoped, readable, and practical — designed to reflect how data engineering work is done in real teams.
