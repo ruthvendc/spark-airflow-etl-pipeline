@@ -1,11 +1,11 @@
 # End-to-End Data Engineering Pipeline (Spark + Airflow)
 
 ## Overview
-This repository contains a **production-style batch data engineering pipeline** built to demonstrate the core skills expected of a **Data Engineer I / II**.
+This repository contains a **production-style batch data engineering pipeline** built to demonstrate the core skills expected of a **Data Engineer**.
 
 The project ingests raw CSV data, validates and transforms it using **PySpark**, writes optimized **Parquet** datasets, and orchestrates the entire workflow using **Apache Airflow**.
 
-All data used was synthetically generated using python Fake — no proprietary or employer-related data.
+All data used was synthetically generated using python Fake — no proprietary or employer-related data was used in this project.
 
 ---
 
@@ -27,7 +27,7 @@ This single project is meant to serve as a **flagship portfolio example**.
 
 - **Language:** Python
 - **Processing:** Apache Spark (PySpark, Spark SQL)
-- **Orchestration:** Apache Airflow
+- **Orchestration:** Apache Airflow (BashOperator
 - **Storage:** Local filesystem (cloud-ready design)
 - **Formats:** CSV → Parquet
 - **Version Control:** Git
@@ -97,20 +97,40 @@ end
 
 ```
 .
-├── dags/
-│   └── data_pipeline_dag.py
-├── jobs/
-│   ├── ingest_bronze.py
-│   ├── transform_silver.py
-│   └── aggregate_gold.py
-├── data/
-│   ├── raw/
-│   ├── bronze/
-│   ├── silver/
-│   └── gold/
-├── utils/
-│   └── spark_session.py
-├── requirements.txt
+├── airflow
+│   ├── dags
+│   │   └── etl_bash.py
+│   ├── data
+│   │   ├── bronze
+│   │   │   ├── facilities
+│   │   │   ├── maint_costs
+│   │   │   └── service_requests
+│   │   ├── gold
+│   │   │   ├── dim_facilities
+│   │   │   ├── dim_service_requests
+│   │   │   └── fact_service_requests
+│   │   ├── raw
+│   │   │   ├── facilities_raw.csv
+│   │   │   ├── maint_costs_raw.csv
+│   │   │   └── service_requests_raw.csv
+│   │   └── silver
+│   │       ├── facilities
+│   │       ├── maint_costs
+│   │       └── service_requests
+│   └── jobs
+│       ├── dim_facilities.py
+│       ├── dim_service_requests.py
+│       ├── fact_service_requests.py
+│       ├── ingest_facilities.py
+│       ├── ingest_maint_costs.py
+│       ├── ingest_service_requests.py
+│       ├── transform_facilities.py
+│       └── transform_service_requests.py
+├── _config.yml
+├── docs
+│   └── assets
+│       ├── css
+│       └── headshot_circle.png
 └── README.md
 ```
 
@@ -171,7 +191,7 @@ airflow dags trigger <dag_name>
 
 ---
 
-## 🧠 What This Demonstrates (Data Engineer I / II)
+## 🧠 What This Demonstrates 
 
 - Writing Spark jobs for ETL workloads
 - Designing batch pipelines end to end
@@ -196,8 +216,8 @@ Hiring managers prefer **depth over volume** — one well-documented pipeline li
 
 ## 📫 Contact
 
-- **GitHub:** https://github.com/your-username
-- **LinkedIn:** https://www.linkedin.com/in/your-profile
+- **GitHub:** https://github.com/ruthvendc
+- **LinkedIn:** https://www.linkedin.com/in/david-ruthven-a0b50521/
 
 ---
 
