@@ -152,7 +152,7 @@ source .venv/bin/activate
 # Reference the python 3.13 constraints even though 3.11 will be used.
 pip3 install apache-airflow==3.1.2 --constraint https://raw.githubusercontent.com/apache/airflow/constraints-3.1.2/constraints-3.13.txt
 
-# You can install pyspark for now but you will also need the actual spark system libraries (see install steps below)
+# Install pyspark
 pip3 install pyspark
 
 #### Install Spark binaries ####
@@ -180,10 +180,10 @@ airflow standalone
 # Airflow UI - Open Web Broswer
 http://localhost:8080/home
 
-# Command Line Trigger DAG
+# Example command line to trigger DAG
 airflow dags trigger <dag_name>
 
-# Spark jobs can also be run independently using `spark-submit`.
+# NOTE: Spark jobs can also be run independently using `spark-submit`.
 
 ```
 
