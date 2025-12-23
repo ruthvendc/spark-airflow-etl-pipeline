@@ -27,7 +27,7 @@ This single project is meant to serve as a **flagship portfolio example**.
 
 - **Language:** Python
 - **Processing:** Apache Spark (PySpark, Spark SQL)
-- **Orchestration:** Apache Airflow (BashOperator
+- **Orchestration:** Apache Airflow (BashOperator)
 - **Storage:** Local filesystem (cloud-ready design)
 - **Formats:** CSV → Parquet
 - **Version Control:** Git
