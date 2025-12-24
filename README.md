@@ -126,12 +126,10 @@ end
 │       ├── ingest_service_requests.py
 │       ├── transform_facilities.py
 │       └── transform_service_requests.py
-├── _config.yml
-├── docs
-│   └── assets
-│       ├── css
-│       └── headshot_circle.png
+├── images
+│   └── DAG_Graph.png
 └── README.md
+
 ```
 
 ---
@@ -187,7 +185,12 @@ airflow dags trigger <dag_name>
 
 ```
 
+---
 
+## 📸 Pipeline Execution (Airflow)
+
+### DAG Graph View
+![Airflow DAG Graph](images/DAG_Graph.png)
 
 ---
 
