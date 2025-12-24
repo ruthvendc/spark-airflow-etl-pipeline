@@ -181,7 +181,7 @@ http://localhost:8080/home
 # Example command line to trigger DAG
 airflow dags trigger <dag_name>
 
-# NOTE: Spark jobs can also be run independently using `spark-submit`.
+# NOTE: You can independently test Spark jobs using `spark-submit` or run code in jupyter notebook, which is what I did.
 
 ```
 
