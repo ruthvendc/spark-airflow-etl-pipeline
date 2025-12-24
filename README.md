@@ -205,21 +205,7 @@ airflow dags trigger <dag_name>
 
 ---
 
-## 🚀 Recommended Portfolio Scope
-
-For a strong Data Engineer I / II portfolio, **2–3 projects are enough**:
-
-1. **This flagship Spark + Airflow pipeline** (core requirement)
-2. One **SQL / analytics-focused project** (data modeling, reporting)
-3. *(Optional)* One **Python utilities or data quality project**
-
-Hiring managers prefer **depth over volume** — one well-documented pipeline like this is far more valuable than many shallow projects.
-
----
-
 ## 📫 Contact
 
 - **GitHub:** https://github.com/ruthvendc
 - **LinkedIn:** https://www.linkedin.com/in/david-ruthven-a0b50521/
-
----
