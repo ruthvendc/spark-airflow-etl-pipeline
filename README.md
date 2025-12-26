@@ -1,7 +1,7 @@
 # End-to-End Data Engineering Pipeline (Spark + Airflow)
 
 ## Overview
-This repository contains an example of a **production-style batch data engineering pipeline** built to exercise some of the skills I have been aquiring.
+This repository contains an example of a **production-style batch data engineering pipeline** built to exercise some of the skills I have aquired while learning more about various data engineering tools.
 
 The project ingests raw CSV data, validates and transforms it using **PySpark**, writes optimized **Parquet** datasets, and orchestrates the entire workflow using **Apache Airflow**.
 
