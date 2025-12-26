@@ -137,7 +137,7 @@ end
 ## ▶️ How to Run Locally
 
 ```bash
-# I performed the following on my ThinkPad P14 Gen 6 AMD running Fedora 43
+# I performed the following on my ThinkPad P14 running Fedora 43
 
 #### Install Airflow ####
 mkdir $HOME/airflow
