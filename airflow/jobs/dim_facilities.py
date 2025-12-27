@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import monotonically_increasing_id, current_date, lit, when, col
+from pyspark.sql.functions import monotonically_increasing_id, current_timestamp, current_date, lit, when, col
 import os
 
 # Set env variables for data locations
@@ -14,16 +14,16 @@ spark = SparkSession.builder.appName("DimServiceRequests").getOrCreate()
 # Add some special columns
 dim_facilities = (
     spark.read.parquet(input_file_path)
-    .withColumn("facility_sk",monotonically_increasing_id())
-    .withColumn("insert_dt",current_date())
+    .withColumn("facility_sk", monotonically_increasing_id())
+    .withColumn("insert_dt", current_timestamp())
     .withColumn("end_date", lit(None).cast("date"))
     .withColumn("is_current", lit(True))
     .withColumn("size",
-    when(col("square_feet") < 80000, "Small")
-    .when((col("square_feet").cast("integer") > 80000) & (col("square_feet").cast("integer") < 160000), "Medium")
-    .when((col("square_feet").cast("integer") > 160000) & (col("square_feet").cast("integer") < 260000), "Large")
-    .otherwise("UNKNOWN")
-           )
+                when(col("square_feet") < 80000, "SMALL")
+                .when((col("square_feet") > 80000) & (col("square_feet") < 160000), "MEDIUM")
+                .when((col("square_feet") > 160000) & (col("square_feet") < 280000), "LARGE")
+                .otherwise("UNKNOWN")
+               )
 )
 
 # Write to gold location
