@@ -5,7 +5,7 @@ This repository contains an example of a **production-style batch data engineeri
 
 The project ingests raw CSV data, validates and transforms it using **PySpark**, writes optimized **Parquet** datasets, and orchestrates the entire workflow using **Apache Airflow**.
 
-All data used was synthetically generated using python Fake — no proprietary or employer-related data was used in this project.
+All data used was synthetically generated using python Faker — no proprietary or employer-related data was used in this project.
 
 ---
 
