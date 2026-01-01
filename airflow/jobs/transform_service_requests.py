@@ -1,27 +1,68 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, when
+from pyspark.sql.functions import col, when, lit
 import os
 
+from logit import get_logger
+from pathlib import Path
+
+# Setting up logging variables
+dag_name="public_data_pipeline"
+script_path = Path(__file__).resolve()
+mod_name = script_path.stem
+
+
 # Set env variables for data locations
+ENV_AIRFLOW_LOGS="AIRFLOW_LOGS"
 ENV_AIRFLOW_DATA="AIRFLOW_DATA"
-directory_path = os.getenv(ENV_AIRFLOW_DATA)
+data_dir_path = os.getenv(ENV_AIRFLOW_DATA)
+log_dir_path = os.getenv(ENV_AIRFLOW_LOGS)
+log_dir_path = os.path.join(log_dir_path,dag_name)
 
-input_file_path = os.path.join(directory_path, "bronze", "service_requests")
-output_file_path = os.path.join(directory_path, "silver", "service_requests")
 
-spark = SparkSession.builder.appName("TransformServiceRequests").getOrCreate()
+# Initiating logger 
+logger = get_logger(name=mod_name, log_dir=log_dir_path, log_file=dag_name)
+logger.info(f"Starting {mod_name}")
+
+
+input_file_path = os.path.join(data_dir_path, "bronze", "service_requests")
+output_file_path = os.path.join(data_dir_path, "silver", "service_requests")
+
+
+# Check for existence of files
+logger.info(f"Checking for existence of {input_file_path} and {output_file_path}")
+for file in (input_file_path,output_file_path):
+    if not os.path.exists(file):
+        logger.error(f"{file} is missing")
+
+
+# Create spark session
+try:
+    spark = SparkSession.builder.appName(mod_name).getOrCreate()
+    logger.info(f"Spark session for {mod_name} created")
+except Exception as e:
+    logger.exception(e)
+
 
 # Modifies null values in column "resolution_time_hr" and drops duplicate "request_id"
-silver_df = (
-    spark.read.parquet(input_file_path)
-         .filter(col("facility_id").isNotNull())
-         .withColumn(
-             "resolution_time_hr",
-             when(col("resolution_time_hr").isNull(), None)
-             .otherwise(col("resolution_time_hr"))
-         )
-         .dropDuplicates(["request_id"])
-     )
+try:
+    silver_df = (
+        spark.read.parquet(input_file_path)
+            .dropDuplicates(["request_id"])
+            .filter(col("facility_id").isNotNull())
+            .withColumn(
+                "resolution_time_hr",
+                 when(col("resolution_time_hr").isNull(), 0)
+                 .otherwise(col("resolution_time_hr"))
+            )
+        )
+    logger.info(f"silver dataframe created")  
+except Exception as e:
+    logger.exception(e)
+
 
 # Write to silver location
-silver_df.write.mode("overwrite").parquet(output_file_path)
+try:
+    silver_df.write.mode("overwrite").parquet(output_file_path)
+    logger.info(f"Parquet file creation: {output_file_path} successful.")
+except Exception as e:
+    logger.exception(e)
