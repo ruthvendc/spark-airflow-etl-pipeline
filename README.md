@@ -98,6 +98,9 @@ end
 ```
 .
 ├── airflow
+│   ├── config
+│   │   ├── envsetup.py
+│   │   └── __init__.py
 │   ├── dags
 │   │   └── etl_bash.py
 │   ├── data
@@ -117,18 +120,22 @@ end
 │   │       ├── facilities
 │   │       ├── maint_costs
 │   │       └── service_requests
-│   └── jobs
-│       ├── dim_facilities.py
-│       ├── dim_service_requests.py
-│       ├── fact_service_requests.py
-│       ├── ingest_facilities.py
-│       ├── ingest_maint_costs.py
-│       ├── ingest_service_requests.py
-│       ├── transform_facilities.py
-│       └── transform_service_requests.py
+│   ├── env
+│   │   └── config.zip
+│   ├── jobs
+│   │   ├── dim_facilities.py
+│   │   ├── dim_service_requests.py
+│   │   ├── fact_service_requests.py
+│   │   ├── ingest_facilities.py
+│   │   ├── ingest_maint_costs.py
+│   │   ├── ingest_service_requests.py
+│   │   ├── transform_facilities.py
+│   │   └── transform_service_requests.py
+│   └── logs
 ├── images
 │   └── DAG_Graph.png
 └── README.md
+
 
 ```
 
