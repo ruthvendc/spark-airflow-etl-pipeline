@@ -163,10 +163,15 @@ ln -s spark-4.0.1-bin-hadoop3 current
 sudo dnf install java-21-openjdk-devel
 
 # You want to put this is your .bash_profile
-export AIRFLOW_HOME=$HOME/airflow
-export AIRFLOW_HOME=$HOME/spark/current
+export SPARK_HOME=$HOME/spark
 export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
-export JAVA_HOME=/usr/lib/jvm/java-21-openjdk 
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
+export AIRFLOW_HOME=$HOME/airflow
+export AIRFLOW_JOBS=${AIRFLOW_HOME}/jobs
+export AIRFLOW_DATA=${AIRFLOW_HOME}/data
+export AIRFLOW_LOGS=${AIRFLOW_HOME}/logs
+export AIRFLOW_ENV=${AIRFLOW_HOME}/env
+
 
 # Exit your shell and create a new one to pick up new environment variables or you can do ". $HOME/.bash_profile"
 
