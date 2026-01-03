@@ -21,46 +21,36 @@ with DAG(
     # Define the task named extract_data from service requests raw data
     ingest_svc_requests = BashOperator(
         task_id="ingest_svc_requests",
-        bash_command="spark-submit $AIRFLOW_JOBS/ingest_service_requests.py"
+        bash_command="export DAG_NAME=\"{{ dag.dag_id }}\" && spark-submit --py-files $AIRFLOW_ENV/config.zip $AIRFLOW_JOBS/ingest_service_requests.py"
     )
-
     ingest_facilities = BashOperator(
         task_id="ingest_facilities",
-        bash_command="spark-submit $AIRFLOW_JOBS/ingest_facilities.py"
+        bash_command="export DAG_NAME=\"{{ dag.dag_id }}\" && spark-submit --py-files $AIRFLOW_ENV/config.zip $AIRFLOW_JOBS/ingest_facilities.py"
     )
-
     ingest_maint_costs = BashOperator(
         task_id="ingest_maint_costs",
-        bash_command="spark-submit $AIRFLOW_JOBS/ingest_maint_costs.py"
+        bash_command="export DAG_NAME=\"{{ dag.dag_id }}\" && spark-submit --py-files $AIRFLOW_ENV/config.zip $AIRFLOW_JOBS/ingest_maint_costs.py"
     )
-
-    # Define the task named transform data 
     transform_svc_requests = BashOperator(
         task_id="transform_svc_requests",
-        bash_command="spark-submit $AIRFLOW_JOBS/transform_service_requests.py"
+        bash_command="export DAG_NAME=\"{{ dag.dag_id }}\" && spark-submit --py-files $AIRFLOW_ENV/config.zip $AIRFLOW_JOBS/transform_service_requests.py"
     )
-
     transform_facilities = BashOperator(
         task_id="transform_facilities",
-        bash_command="spark-submit $AIRFLOW_JOBS/transform_facilities.py"
+        bash_command="export DAG_NAME=\"{{ dag.dag_id }}\" && spark-submit --py-files $AIRFLOW_ENV/config.zip $AIRFLOW_JOBS/transform_facilities.py"
     )
-
-    # Create dimension table for service requests
     dim_svc_requests = BashOperator(
         task_id="dim_svc_requests",
-        bash_command="spark-submit $AIRFLOW_JOBS/dim_service_requests.py"
+        bash_command="export DAG_NAME=\"{{ dag.dag_id }}\" && spark-submit --py-files $AIRFLOW_ENV/config.zip $AIRFLOW_JOBS/dim_service_requests.py"
     )
-
     dim_facilities = BashOperator(
         task_id="dim_facilities",
-        bash_command="spark-submit $AIRFLOW_JOBS/dim_facilities.py"
+        bash_command="export DAG_NAME=\"{{ dag.dag_id }}\" && spark-submit --py-files $AIRFLOW_ENV/config.zip $AIRFLOW_JOBS/dim_facilities.py"
     )
-
     fact_facilities = BashOperator(
         task_id="fact_facilities",
-        bash_command="spark-submit $AIRFLOW_JOBS/fact_service_requests.py"
+        bash_command="export DAG_NAME=\"{{ dag.dag_id }}\" && spark-submit --py-files $AIRFLOW_ENV/config.zip $AIRFLOW_JOBS/fact_service_requests.py"
     )
-
 
 
     # Define the task pipeline
