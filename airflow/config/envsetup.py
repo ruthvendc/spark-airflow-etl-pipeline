@@ -6,11 +6,13 @@ def get_mod_name(script_file):
     script_path = Path(script_file).resolve()
     return script_path.stem
 
+
 def get_dag_name():
     dag_name = os.getenv("DAG_NAME")
     if not dag_name:
         raise EnvironmentError("DAG_NAME not set")
     return dag_name
+
 
 def get_data_dir():
     return os.getenv("AIRFLOW_DATA")
