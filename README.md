@@ -98,9 +98,6 @@ end
 ```
 .
 ├── airflow
-│   ├── config
-│   │   ├── envsetup.py
-│   │   └── __init__.py
 │   ├── dags
 │   │   └── etl_bash.py
 │   ├── data
@@ -121,7 +118,7 @@ end
 │   │       ├── maint_costs
 │   │       └── service_requests
 │   ├── env
-│   │   └── config.zip
+│   │   └── envsetup.py
 │   ├── jobs
 │   │   ├── dim_facilities.py
 │   │   ├── dim_service_requests.py
