@@ -1,22 +1,16 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, when, lit
 import os
-
 from logit import get_logger
 from pathlib import Path
-
-# Setting up logging variables
-dag_name="public_data_pipeline"
-script_path = Path(__file__).resolve()
-mod_name = script_path.stem
+from config.envsetup import get_mod_name, get_dag_name, get_data_dir, get_log_dir
 
 
-# Set env variables for data locations
-ENV_AIRFLOW_LOGS="AIRFLOW_LOGS"
-ENV_AIRFLOW_DATA="AIRFLOW_DATA"
-data_dir_path = os.getenv(ENV_AIRFLOW_DATA)
-log_dir_path = os.getenv(ENV_AIRFLOW_LOGS)
-log_dir_path = os.path.join(log_dir_path,dag_name)
+# Setup env
+mod_name = get_mod_name(__file__)
+dag_name = get_dag_name()
+data_dir_path = get_data_dir()
+log_dir_path = get_log_dir(dag_name)
 
 
 # Initiating logger 
